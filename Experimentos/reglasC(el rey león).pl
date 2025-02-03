@@ -17,63 +17,61 @@ union('Scar2','Zira').
 union('Nala','Simba').
 
 
-super("Desturi","Mufasa").
-super("Desturi","Scar").
-super("Almasi","Mufasa").
-super("Almasi","Scar").
+super('Desturi','Mufasa').
+super('Desturi','Scar').
+super('Almasi','Mufasa').
+super('Almasi','Scar').
 
-super("Datty","Scar2").
-super("Datty","Zira").
-super("Spotty","Scar2").
-super("Spotty","Zira").
-
-super("Sacabi","Simba").
-super("Mufasa","Simba").
-super("Nala","Kiaca").
-super("Simba","Kiaca").
+super('Datty','Scar2').
+super('Datty','Outsiders').
+super('Spotty','Scar2').
+super('Spotty','Outsiders').
 
 
+super('Sacabi','Simba').
+super('Mufasa','Simba').
+super('Sacafina', 'Nala').
+super('Rogue', 'Nala').
+super('Nala','Kiaca').
+super('Simba','Kiaca').
+super('Scar2','Kovu').
+super('Scar2','Vitnni').
+super('Scar2','Nuka').
+super('Zira','Kovu').
+super('Zira','Vitnni').
+super('Zira','Nuka').
+
+%%%%machos y hembras
+macho('Desturi').
+macho('Spotty').
+macho('Tai').
+macho('Mufasa').
+macho('Scar').
+macho('Scar2').
+macho('Simba').
+macho('Kovu').
+macho('Nuka').
+macho('Rogue').
 
 
-super('Abraham','Homero').
-super('Mona','Homero').
-super('Jackie','Marge').
-super('Clancy','Marge').
-super('Homero','Bart').
-super('Homero','Lisa').
-super('Homero','Maggie').
-super('Marge','Bart').
-super('Marge','Lisa').
-super('Marge','Maggie').
+hembra('Outsiders').
+hembra('Almasi').
+hembra('Datty').
+hembra('Sacabi').
+hembra('Zira').
+hembra('Sacafina').
+hembra('Nala').
+hembra('Vitnni').
+hembra('Kiaca').
 
 
-super('Homero','Ayudante de santa').
-super('Marge','Bola de nieve').
-
-
-%%%%Hombres y mujeres
-hombre('Abraham').
-hombre('Clancy').
-hombre('Homero').
-hombre('Bart').
-
-
-mujer('Mona').
-mujer('Jackie').
-mujer('Marge').
-mujer('Lisa').
-mujer('Maggie').
-
-
-animal('Ayudante de santa').
-animal('Bola de nieve').
-
+adoptivo('Tai').
 
 sub_(A,B):-super(B,A).
 
 
-hijo(A,B):-sub_(A,B),hombre(A).
-hija(A,B):-sub_(A,B),mujer(A).
+hijo(A,B):-sub_(A,B),macho(A).
+hija(A,B):-sub_(A,B),hembra(A).
 
 
 alterno(A,B,C):-
@@ -83,39 +81,39 @@ A\=B.
 %pondré una condición para que C simplemente tenga que existir (en caso de que me diga que es un singleton).
 
 hermano(A,B):-
-alterno(A,B,C),hombre(A),
-(mujer(C);hombre(C)),
+alterno(A,B,C),macho(A),
+(hembra(C);macho(C)),
 A\=B.
 
 
 hermana(A,B):-
-alterno(A,B,C),mujer(A),
-(mujer(C);hombre(C)),
+alterno(A,B,C),hembra(A),
+(hembra(C);macho(C)),
 A\=B.
 
 
-esposo(A,B):-union(A,B),hombre(A),mujer(B).
-esposa(A,B):-union(A,B),mujer(A),hombre(B).
+esposo(A,B):-union(A,B),macho(A),hembra(B).
+esposa(A,B):-union(A,B),hembra(A),macho(B).
 
 
-padre(A,B):-super(A,B),hombre(A),(hombre(B);mujer(B)).
+padre(A,B):-super(A,B),macho(A),(macho(B);hembra(B)).
 
-madre(A,B):-super(A,B),mujer(A),(hombre(B);mujer(B)).
+madre(A,B):-super(A,B),hembra(A),(macho(B);hembra(B)).
 
 
 super2(A,C):-super(A,B),super(B,C).
 %%%%Me pregunto si será necesario diferenciar variables aquí (tenía doble diferenciador).
 
 
-abuela(A,B):-super2(A,B),mujer(A),\+animal(B).
+abuela(A,B):-super2(A,B),hembra(A),\+adoptivo(B).
 
-abuelo(A,B):-super2(A,B),hombre(A),\+animal(B).
-
-
-nieto(A,B):-super2(B,A),hombre(A).
-nieta(A,B):-super2(B,A),mujer(A).
+abuelo(A,B):-super2(A,B),macho(A),\+adoptivo(B).
 
 
-es_mascota_de(A,B):-
-animal(A),sub_(A,B);
-animal(A),alterno(A,B,C),(hombre(C);mujer(C)).
+nieto(A,B):-super2(B,A),macho(A).
+nieta(A,B):-super2(B,A),hembra(A).
+
+
+es_familiar_adoptivo(A,B):-
+adoptivo(A),sub_(A,B);
+adoptivo(A),alterno(A,B,C),(macho(C);hembra(C)).
