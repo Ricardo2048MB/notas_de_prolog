@@ -14,13 +14,16 @@ union('Desturi', 'Almasi').
 union('Datty','Spotty').
 union('Sacabi','Mufasa').
 union('Scar2','Zira').
+union('Sacafina','Rogue').
 union('Nala','Simba').
 
 
+super('Desturi','Tai').
 super('Desturi','Mufasa').
 super('Desturi','Scar').
 super('Almasi','Mufasa').
 super('Almasi','Scar').
+
 
 super('Datty','Scar2').
 super('Datty','Outsiders').
@@ -30,16 +33,22 @@ super('Spotty','Outsiders').
 
 super('Sacabi','Simba').
 super('Mufasa','Simba').
-super('Sacafina', 'Nala').
-super('Rogue', 'Nala').
-super('Nala','Kiaca').
-super('Simba','Kiaca').
+
+
 super('Scar2','Kovu').
 super('Scar2','Vitnni').
 super('Scar2','Nuka').
 super('Zira','Kovu').
 super('Zira','Vitnni').
 super('Zira','Nuka').
+
+
+super('Sacafina', 'Nala').
+super('Rogue', 'Nala').
+
+
+super('Nala','Kiaca').
+super('Simba','Kiaca').
 
 %%%%machos y hembras
 macho('Desturi').
@@ -48,15 +57,15 @@ macho('Tai').
 macho('Mufasa').
 macho('Scar').
 macho('Scar2').
+macho('Rogue').
 macho('Simba').
 macho('Kovu').
 macho('Nuka').
-macho('Rogue').
 
 
-hembra('Outsiders').
 hembra('Almasi').
 hembra('Datty').
+hembra('Outsiders').
 hembra('Sacabi').
 hembra('Zira').
 hembra('Sacafina').
@@ -92,8 +101,8 @@ alterno(A,B,C),hembra(A),
 A\=B.
 
 
-esposo(A,B):-union(A,B),macho(A),hembra(B).
-esposa(A,B):-union(A,B),hembra(A),macho(B).
+esposo(A,B):-(union(A,B),macho(A),hembra(B));(union(B,A),macho(A),hembra(B)).
+esposa(A,B):-(union(A,B),hembra(A),macho(B));(union(B,A),hembra(A),macho(B)).
 
 
 padre(A,B):-super(A,B),macho(A),(macho(B);hembra(B)).
