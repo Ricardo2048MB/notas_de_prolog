@@ -1,0 +1,136 @@
+%Hicimos esto antes de los ejercicios
+animal(perro).
+animal(gato).
+animal(perico).
+animal(cocodrilo).
+%10 relaciones con 2 objetos
+amistad(perro,gato).
+amistad(perico,cocodrilo).
+amistad(perro,cocodrilo).
+amistad(amarillo,rojo).
+amistad(buzz,woody).
+amistad(dom,marcus).
+amistad(pepe,tonio).
+amistad(uña,mugre).
+amistad(scooby,shaggy).
+amistad(john_connor, terminator_jaja).
+%Otras 10 relaciones, pero esta vez con 3 objetos
+hermandad(hugo,paco,luis).
+hermandad(hermano1,hermano2,hermano3).
+hermandad(anemona,pez_payaso,agua).
+hermandad(hermano4,hermano5,hermano6).
+hermandad(hermano7,hermano8,hermano9).
+hermandad(hermana1,hermana2,hermana3).
+hermandad(triyisus2,triyisus2,triyisus3).
+hermandad(perro1,perro2,perro3).
+hermandad(gato1,gato2,gato3).
+hermandad(cocodrilo1,cocodrilo2,cocodrilo3).
+Genera un base de conocimiento de 20 relaciones, 10  con 2 objetos. y otras 10 con 3 objetos .
+
+Nota: Es importante puedas generar tu base de conocimiento preparada para utilizar la barra espaciadora.
+
+Dada tu base de conocimiento ábrela en prolog y genera:
+
+1. 5 preguntas básicas a tu base de conocimiento:
+
+?- hermandad(hermano4,hermano5,hermano6).
+true.
+
+?- hermandad(hugo,paco,luis).
+true.
+
+?- hermandad(juan,paco,pedro).
+false.
+
+?- hermandad(agua,aire,tierra).
+false.
+
+?- hermandad(fisica,quimica,termodinamica).
+false.
+
+2. 5 preguntas utilizando , a tu base de conocimiento:
+
+?- hermandad(hugo,paco,luis),hermandad(primero,segundo,tercero).
+false.
+
+?- hermandad(hugo,paco,luis),hermandad(gato1,gato2,gato3).
+true.
+
+?- amistad(dom,marcus),hermandad(hugo,paco,luis).
+true.
+
+?- amistad(dom,marcus),hermandad(hugo,paco,dom).
+false.
+
+?- amistad(hugo,paco),hermandad(hugo,paco,luis).
+false.
+
+3. 5 preguntas utilizando ; a tu base de conocimiento:
+
+?- amistad(verde,azul);amistad(pepe,tonio).
+true.
+
+?- amistad(amarillo,rojo);amistad(pepe,tonio).
+true .
+
+?- amistad(amarillo,rojo);hermandad(pepe,tonio,gato3).
+true .
+
+?- amistad(amarillo,azul);hermandad(gato1,gato2,gato3).
+true.
+
+?- amistad(amarillo,azul);hermandad(cocodrilo1,cocodrilo2,cocodrilo3).
+true.
+
+4. 5 preguntas utilizando 3 objetos
+
+?- amistad(X,Y).
+X = perro,
+Y = gato .
+
+?- amistad(X,gato).
+X = perro.
+
+?- amistad(perro,Y).
+Y = gato .
+
+?- amistad(pepe,Y).
+Y = tonio.
+
+?- amistad(tonio,Y).
+false.
+
+?- amistad(X,tonio).
+X = pepe.
+
+5. 5 preguntas donde utilices la barra espaciadora:
+?- hermandad(X,Y,Z).
+X = hugo,
+Y = paco,
+Z = luis ;
+X = hermano1,
+Y = hermano2,
+Z = hermano3 ;
+X = anemona,
+Y = pez_payaso,
+Z = agua ;
+X = hermano4,
+Y = hermano5,
+Z = hermano6 ;
+X = hermano7,
+Y = hermano8,
+Z = hermano9 ;
+X = hermana1,
+Y = hermana2,
+Z = hermana3 ;
+X = Y, Y = triyisus2,
+Z = triyisus3 ;
+X = perro1,
+Y = perro2,
+Z = perro3 ;
+X = gato1,
+Y = gato2,
+Z = gato3 ;
+X = cocodrilo1,
+Y = cocodrilo2,
+Z = cocodrilo3.

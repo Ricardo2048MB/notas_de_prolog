@@ -1,0 +1,8 @@
+CABEZA:-COLA
+Las reglas van desde el nivel más sencillo al más complicado.
+
+	A	B
+altura(jirafa,elefante).
+altura(elefante,leon).
+altura(leon,perro).
+esMasGrande(A,C):-altura(A,B),altura(B,C),altura(C,D).
