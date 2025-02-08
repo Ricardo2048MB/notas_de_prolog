@@ -1,15 +1,12 @@
 %Acá arriba solamente se define una relación entre un objeto, y una lista de objetos.
-estudiante(juan,[fisica,algebra,espanol]).
-estudiante(rebeca,[fisica,algoritmica,quimica]).
+estudia(juan,[fisica,algebra,espanol]).
+estudia(rebeca,[fisica,algoritmica,quimica]).
 
-%Esto es una vil regurgitación.
-materias_est(Estudiante,Materias):-
-estudiante(Estudiante,Materias).
 
 %Ésta segunda línea ya es un tanto más decente
-inscrito(Estudiante,Materia):-%Un estudiante está inscrito en una materia, si…
-estudiante(Estudiante,Materias),%…existe una relación entre ese estudiante y una lista de materias…
-pertenece(Materia,Materias).%…en la que figura la materia en cuestión. 
+inscrito(Estudiante,Materia):-%Se dice que un Estudiante está inscrito en un Materia, si…
+estudia(Estudiante,Materias),%…el Estudiante estudia los elementos de una lista Materias…
+pertenece(Materia,Materias).%…en la que justamente figura esa Materia.
 
 %Recursividad
 pertenece(X,[X|_]).%Regla de parada (hmm, no lo creo, me suena a "!"). En lo general sí es una regla de parada. Pero en lo particular sólo el caracter "!" es regla de parada.
