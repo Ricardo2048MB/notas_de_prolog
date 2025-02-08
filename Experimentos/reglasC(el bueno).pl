@@ -1,16 +1,3 @@
-/*
-
-Tengo que hacer que sean las uniones las que sean padres de otros elementos o algo así... Se queda pendiente esto 
-a las 13:03 del miércoles 29 de enero de 2025
-
-Este ya no falla, pero debo ver si hay algo que esté de más.
-
-19:06 Ya le quité superfluidades y siguió funcionando de maravilla. Ahora sólo hay que justificar de dónde saqué la info.
-
-Éste será el archivo que enviaré.
-
-*/
-
 union('Abraham','Mona').
 union('Jackie','Clancy').
 union('Homero','Marge').
