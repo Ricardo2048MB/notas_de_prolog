@@ -144,11 +144,14 @@ colores_disponibles(Colores,Producto),
 pertenece(Color,Colores).
 
 
-cuesta(['Computadora gamer HP Omen',10000]).
-cuesta(['Computadora gamer Lenovo Legion',11500]).
-cuesta(['Computadora gamer Acer Predator',12300]).
-cuesta(['Computadora gamer Alienware',12300]).
-cuesta(['Computadora gamer ASUS ROG',25300]).
+lista_de_precios([['Computadora gamer HP Omen',10000],
+		['Computadora gamer Lenovo Legion',11500],
+		['Computadora gamer Acer Predator',12300],
+		['Computadora gamer Alienware',12300],
+		['Computadora gamer ASUS ROG',25300]]).
 
 
-/*Hagamos consultas*/
+cuesta(Producto,Cantidad):-
+lista_de_precios(Elementos),
+pertenece(Elemento,Elementos),
+Elemento=[Producto,Cantidad].
