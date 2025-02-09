@@ -25,8 +25,8 @@ Tu tarea es escribir consultas en Prolog para verificar:
 
 %Recursividad
 pertenece(X,[X|_]).%Regla de parada
-pertenece(X,[_|T]):-pertenece(X,T)./*Aquí se ejecuta primero pertenece pero 
-con T siendo la lista que es la cola (es decir, aquí está la recursividad).*/
+pertenece(X,[_|T]):-pertenece(X,T).%Aquí se ejecuta primero pertenece pero 
+%con T siendo la lista que es la cola (es decir, aquí está la recursividad).
 
 
 compatibilidad(['RAM DDR4 32 GB Hello Kitty','Reloj RGB Casio','Ventiladores de enfriamiento snowman','USB HUB 4 puertos Pulptastic','Lector multi-tarjetas Rockman','Cable HDMI trenzado Premium 8K Eyesight','Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Linkman','Panel de botones de superposición gráfica Anchor'],'Computadora gamer ASUS ROG').
@@ -53,3 +53,11 @@ colores_disponibles(Colores,Producto),
 pertenece(Color,Colores).
 
 
+cuesta(['Computadora gamer HP Omen',10000]).
+cuesta(['Computadora gamer Lenovo Legion',11500]).
+cuesta(['Computadora gamer Acer Predator',12300]).
+cuesta(['Computadora gamer Alienware',12300]).
+cuesta(['Computadora gamer ASUS ROG',25300]).
+
+
+/*Hagamos consultas*/
