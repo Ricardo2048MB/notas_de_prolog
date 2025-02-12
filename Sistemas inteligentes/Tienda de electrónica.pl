@@ -1,4 +1,6 @@
 /*
+
+
 Ejercicio
 Gestión de Inventario de una Tienda de electrónica
 
@@ -17,9 +19,11 @@ Ejemplo:
 
 Tu tarea es escribir consultas en Prolog para verificar:
 1.	Qué accesorios son compatibles con un determinado dispositivo. [Hecho]
-2.	Cuál es el precio de un producto en la tienda.
+2.	Cuál es el precio de un producto en la tienda. [Hecho]
 3.	Si un accesorio es compatible con un dispositivo específico. [Hecho]
 4.	Los colores disponibles por cada producto [Hecho]
+
+
 */
 
 
@@ -29,66 +33,69 @@ pertenece(X,[_|T]):-pertenece(X,T).%Aquí se ejecuta primero pertenece pero
 %con T siendo la lista que es la cola (es decir, aquí está la recursividad).
 
 
-compatibilidad(['RAM DDR4 32 GB Hello Kitty',
-				'Reloj RGB Casio','Ventiladores de enfriamiento snowman',
-				'USB HUB 4 puertos Pulptastic',
-				'Lector multi-tarjetas Rockman',
-				'Cable HDMI trenzado Premium 8K Eyesight',
-				'Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Linkman',
-				'Panel de botones de superposición gráfica Anchor'],
-				'Computadora gamer ASUS ROG').
+compatibles(['RAM DDR4 32 GB Hello Kitty',
+			'Reloj RGB Casio','Ventiladores de enfriamiento snowman',
+			'USB HUB 4 puertos Pulptastic',
+			'Lector multi-tarjetas Rockman',
+			'Cable HDMI trenzado Premium 8K Eyesight',
+			'Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Linkman',
+			'Panel de botones de superposición gráfica Anchor'],
+			'Computadora gamer ASUS ROG').
 
 
-compatibilidad(['RAM DDR4 32 GB Halo',
-				'Reloj RGB Ferrari',
-				'Ventiladores de enfriamiento Olaf',
-				'USB HUB 4 puertos YameteKudasai',
-				'Lector multi-tarjetas Ozzyman',
-				'Cable HDMI trenzado Premium 8K IC2',
-				'Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Oh-my-link',
-				'Panel de botones de superposición gráfica Anchovy'],
-				'Computadora gamer Alienware').
+compatibles(['RAM DDR4 32 GB Halo',
+			'Reloj RGB Ferrari',
+			'Ventiladores de enfriamiento Olaf',
+			'USB HUB 4 puertos YameteKudasai',
+			'Lector multi-tarjetas Ozzyman',
+			'Cable HDMI trenzado Premium 8K IC2',
+			'Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Oh-my-link',
+			'Panel de botones de superposición gráfica Anchovy'],
+			'Computadora gamer Alienware').
 
 
-compatibilidad(['RAM DDR4 32 GB Corsair','Reloj RGB Senheiser',
-				'Ventiladores de enfriamiento Elsational',
-				'USB HUB 4 puertos Hubington',
-				'Lector multi-tarjetas AWL',
-				'Cable HDMI trenzado Premium 8K Blindshot',
-				'Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Enocman',
-				'Panel de botones de superposición gráfica Vault-tec'],
-				'Computadora gamer Acer Predator').
+compatibles(['RAM DDR4 32 GB Corsair','Reloj RGB Senheiser',
+			'Ventiladores de enfriamiento Elsational',
+			'USB HUB 4 puertos Hubington',
+			'Lector multi-tarjetas AWL',
+			'Cable HDMI trenzado Premium 8K Blindshot',
+			'Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Enocman',
+			'Panel de botones de superposición gráfica Vault-tec'],
+			'Computadora gamer Acer Predator').
 
 
-compatibilidad(['RAM DDR4 32 GB Steelers',
-				'Reloj RGB Holcim',
-				'Ventiladores de enfriamiento Mr. Freeze',
-				'USB HUB 4 puertos Spicy Horse',
-				'Lector multi-tarjetas 4x4',
-				'Cable HDMI trenzado Premium 8K AIWA',
-				'Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Xenomorph',
-				'Panel de botones de superposición gráfica Anchor premium'],
-				'Computadora gamer Lenovo Legion').
+compatibles(['RAM DDR4 32 GB Steelers',
+			'Reloj RGB Holcim',
+			'Ventiladores de enfriamiento Mr. Freeze',
+			'USB HUB 4 puertos Spicy Horse',
+			'Lector multi-tarjetas 4x4',
+			'Cable HDMI trenzado Premium 8K AIWA',
+			'Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Xenomorph',
+			'Panel de botones de superposición gráfica Anchor premium'],
+			'Computadora gamer Lenovo Legion').
 
 
-compatibilidad(['RAM DDR4 32 GB Avengers',
-				'Reloj RGB Alnitak',
-				'Ventiladores de enfriamiento Dr. Snowflake',
-				'USB HUB 4 puertos Havok',
-				'Lector multi-tarjetas Wildboar',
-				'Cable HDMI trenzado Premium 8K Oleico',
-				'Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Thunderbolt',
-				'Panel de botones de superposición gráfica Holland'],
-				'Computadora gamer HP Omen').
+compatibles(['RAM DDR4 32 GB Avengers',
+			'Reloj RGB Alnitak',
+			'Ventiladores de enfriamiento Dr. Snowflake',
+			'USB HUB 4 puertos Havok',
+			'Lector multi-tarjetas Wildboar',
+			'Cable HDMI trenzado Premium 8K Oleico',
+			'Cable de fibra óptica 10g Transmisión Pd60w Tipo-C a C Thunderbolt',
+			'Panel de botones de superposición gráfica Holland'],
+			'Computadora gamer HP Omen').
 
 
 compatible(Accesorio,Producto):-
-compatibilidad(Accesorios,Producto),
+compatibles(Accesorios,Producto),
 pertenece(Accesorio,Accesorios).
 
 
-colores_disponibles(['Rojo','Naranja',
-					'Amarillo','Verde','Azul',
+colores_disponibles(['Rojo',
+					'Naranja',
+					'Amarillo',
+					'Verde',
+					'Azul',
 					'Añil mendicante',
 					'Violeta',
 					'Gris metálico'],
@@ -145,13 +152,38 @@ pertenece(Color,Colores).
 
 
 lista_de_precios([['Computadora gamer HP Omen',10000],
-		['Computadora gamer Lenovo Legion',11500],
-		['Computadora gamer Acer Predator',12300],
-		['Computadora gamer Alienware',12300],
-		['Computadora gamer ASUS ROG',25300]]).
+				['Computadora gamer Lenovo Legion',11500],
+				['Computadora gamer Acer Predator',12300],
+				['Computadora gamer Alienware',12300],
+				['Computadora gamer ASUS ROG',25300]]).
 
 
 cuesta(Producto,Cantidad):-
 lista_de_precios(Elementos),
 pertenece(Elemento,Elementos),
 Elemento=[Producto,Cantidad].
+
+
+/*
+
+
+Consultas para probar
+
+%1.	Qué accesorios son compatibles con un determinado dispositivo. [Hecho]
+compatibles(Accesorios,'Computadora gamer HP Omen').
+
+
+%2.	Cuál es el precio de un producto en la tienda. [Hecho]
+cuesta('Computadora gamer HP Omen',Precio).%**La consulta es esta**
+cuesta(Producto,Precio).%Consulta alternativa
+
+
+%3.	Si un accesorio es compatible con un dispositivo específico. [Hecho]
+compatible('Reloj RGB Alnitak','Computadora gamer HP Omen').
+
+
+%4.	Los colores disponibles por cada producto [Hecho]
+colores_disponibles(Colores,Producto).
+
+
+*/
