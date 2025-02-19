@@ -1,0 +1,174 @@
+ricardo@laptop-ricardo:~/Prolog/Sistemas inteligentes$ swipl llenar_listas.pl 
+Welcome to SWI-Prolog (threaded, 64 bits, version 9.2.9)
+SWI-Prolog comes with ABSOLUTELY NO WARRANTY. This is free software.
+Please run ?- license. for legal details.
+
+For online help and background, visit https://www.swi-prolog.org
+For built-in help, use ?- help(Topic). or ?- apropos(Word).
+
+?- iniciar.
+Por favor, llena la lista de números enteros:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 1.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 2.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 3.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 4.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 5.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 6.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 7.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 8.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 9.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 0.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Por favor, llena la lista de colores en español:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: rojo.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: verde.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: azul.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Por favor, llena la lista de letras del abecedario en mayúsculas:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "A".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "B".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "C".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "D".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "E".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Por favor, llena la lista de colores en inglés:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Por favor, llena la lista con caracteres del conjunto {X,Y,Z,F}:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "X".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "Y".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "Z".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "F".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Por favor, llena la lista de marcas de automóviles:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "Maseratti".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "Ferrari".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "McLaren".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "Infinity".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Imprimiendo lista de Números...
+?- iniciar.
+Por favor, llena la lista de números enteros:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 1.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 2.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 3.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 4.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 5.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 6.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 7.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 8.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 9.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: 0.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Por favor, llena la lista de colores en español:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: rojo.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: verde.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: azul.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Por favor, llena la lista de letras del abecedario en mayúsculas:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "A".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "B".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "C".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "D".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "E".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Por favor, llena la lista de colores en inglés:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: red.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: green.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: blue.
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Por favor, llena la lista con caracteres del conjunto {X,Y,Z,F}:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "X".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "Y".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "Z".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "F".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Por favor, llena la lista de marcas de automóviles:
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "Maseratti".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "Ferrari".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "McLaren".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: "Infinity".
+Escribe un dato (escriba "fin." para terminar de llenar esta lista)
+|: fin.
+Imprimiendo lista de Números...
+[1,2,3,4,5,6,7,8,9,0]
+Imprimiendo lista de colores en español...
+[rojo,verde,azul]
+Imprimiendo lista de letras mayúsculas...
+[A,B,C,D,E]
+Imprimiendo lista de colores en inglés...
+[red,green,blue]
+Imprimiendo lista con caracteres del conjunto {XYZF}...
+[X,Y,Z,F]
+Imprimiendo lista de marcas de autos...
+[Maseratti,Ferrari,McLaren,Infinity]
+Imprimiendo lista de todo...
+[1,2,3,4,5,6,7,8,9,0,rojo,verde,azul,A,B,C,D,E,red,green,blue,X,Y,Z,F,Maseratti,Ferrari,McLaren,Infinity]
+Imprimiendo lista como en el pizarrón...
+[1,A,X,2,B,4,rojo,red,verde,green,Maseratti,Ferrari,McLaren,Infinity]
+true.
