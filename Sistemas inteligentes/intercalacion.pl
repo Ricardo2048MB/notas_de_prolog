@@ -139,7 +139,7 @@ intercalar_listas(A,B,C):-
 %4
 eliminar_elemento(A,B,C):-
     writeln(''),
-    writeln('Mostrando 3 listas antes de eliminar un elemento'),
+    writeln('Mostrando tus 3 listas antes de eliminar un elemento'),
     writeln(''),
     writeln('Primera lista (A)'),
     writeln(A),
@@ -162,7 +162,7 @@ eliminar_elemento(A,B,C):-
     delete(B,_eb,BR),
     delete(C,_ec,CR),
     writeln(''),
-    writeln('Mostrando 3 listas tras eliminar un elemento de cada una...'),
+    writeln('Mostrando 3 tus listas tras eliminar un elemento de cada una...'),
     writeln(''),
     writeln('Primera lista (A)'),
     writeln(AR),
@@ -187,4 +187,9 @@ iniciar:-
         A \= [],
         B \= [],
         C \= []
-    ) -> writeln('Programa terminado').
+    ) -> 
+    writeln('Programa terminado'),
+    writeln('Autor 100% humano: Ricardo Muñoz Bolaños'),
+    writeln('¡Sígueme en Github!'),
+    writeln('https://github.com/Ricardo2048MB'),
+    writeln('¿Qué? ¿No tienes Github? jAJajJAA').
