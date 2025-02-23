@@ -182,4 +182,9 @@ salir:-
 
 
 iniciar:-
-    menu_principal(A,B,C).
+    menu_principal(A,B,C),
+    (
+        A \= [],
+        B \= [],
+        C \= []
+    ) -> writeln('Programa terminado').
