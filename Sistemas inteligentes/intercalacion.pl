@@ -191,5 +191,4 @@ iniciar:-
     writeln('Programa terminado'),
     writeln('Autor 100% humano: Ricardo Muñoz Bolaños'),
     writeln('¡Sígueme en Github!'),
-    writeln('https://github.com/Ricardo2048MB'),
-    writeln('¿Qué? ¿No tienes Github? jAJajJAA').
+    writeln('https://github.com/Ricardo2048MB').
